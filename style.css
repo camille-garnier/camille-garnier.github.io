@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+
+
+/* Ca c'est pour toute la page visible: */
+body {
+    background-color: #ffffff;
+    padding: 0px;
+    /*espace intérieur entre le bord du body et le contenu*/
+    margin: 0px;
+    /* Marge pour éviter que le texte touche le bord de l'écran*/
+    color: #000000;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+body .caseintro,
+.casecontact {
+    /* text-align: center;*/
+
+    border: 10px solid #026f96;
+    max-width: 1000px;
+    /* largeur du bloc */
+    margin: 10px auto 10px auto;
+    /* en haut/ à droite / en bas / à gauche */
+    padding: 10px 10px 10px 10px;
+}
+
+body .casecontact {
+    text-align: center;
+    /*  margin: 10px auto 100px auto;*/
+    /* en haut/ à droite / en bas / à gauche */
+    margin: auto;
+}
+
+
+body .page {
+    max-width: 800px;
+    /* largeur du bloc */
+    margin: 30px auto 100px auto;
+    /* en haut| à droite | en bas | à gauche */
+    padding: 10px 30px 30px 30px;
+    background-color: #f2f2f2;
+}
+
+body .page_intro {
+    max-width: 1000px;
+    /* largeur du bloc */
+    margin: 30px auto 100px auto;
+    /* en haut| à droite | en bas | à gauche */
+    padding: 10px 30px 30px 30px;
+    background-color: #fffefe;
+}
+
+/* Des marges autour de la page visible */
+
+/* Barre de navigation */
+nav {
+    display: flex;
+    /* on met tous les boutons sur une ligne */
+    flex-wrap: wrap;
+    /* passage à la ligne s'il y a pas assez de place sur une ligne */
+    justify-content: center;
+    /* pour centrer les boutons horizontalement */
+    justify-content: space-between;
+    /* une partie à gauche une partie à droite */
+    position: sticky;
+    top: 0;
+    background-color: #026f96;
+    color: #ffffff;
+    margin: 0px 0px;
+    /*pour avoir la barre collée au bord */
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    /*largeur de la barre  */
+    /*
+    border-top: 5px solid #000000;
+    border-bottom: 5px solid #000000;
+    /*pour avoir des barres autour de la barre de navigation */
+
+}
+
+
+nav .Nom,
+nav .onglets {
+    cursor: pointer;
+    display: flex;
+    gap: 20px;
+    /* espace entre chaque noms de lien */
+}
+
+nav a:hover {
+    color: #7900fa;
+    /* couleur du texte quand la souris passe sur le lien*/
+}
+
+nav a {
+    text-decoration: none;
+    /*sans ça c'est sousligné*/
+    color: #ffffff;
+    /*sans ça c'est bleu*/
+}
+
+nav .buttons button {
+    padding: 20px 20px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    /* souris passe en main si sur le bouton*/
+    outline: none;
+}
+
+/* Fin de la barre de navigation */
+
+
+
+
+
+header {
+    text-align: center;
+    /* centre horizontalement le texte */
+}
+
+img {
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.petite {
+    width: 100%;
+    max-width: 200px;
+}
+
+.moyenne {
+    width: 100%;
+    max-width: 400px;
+}
+
+.intermediaire {
+    width: 100%;
+    max-width: 300px;
+}
+
+
+.colonnes {
+    padding: 0 15px;
+    display: flex;
+    /* parce que c'est un site pour flex (non) */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+}
+
+.aboutme {
+    flex: 1;
+    /* toujours pas parce que c'est un site pour flex */
+}
+
+/* Fin du header */
+
+/* Pied de page */
+footer {
+    background-color: #026f96;
+    color: #ffffff8a;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+}
+
+footer .mail {
+    text-decoration: none;
+    /*sans ça c'est sousligné*/
+    color: #ffffff;
+    /*sans ça c'est bleu*/
+}
+
+footer .mail:hover {
+    color: #7900fa;
+    /* couleur du texte quand la souris passe sur le lien*/
+}
+
+h1 {
+    color: #026f96;
+}
+
+/* Fin du pied de page */
+
+/* version pour les petits ecrans, per ex des telephones: */
+@media screen and (max-width: 700px) {
+
+
+    body {
+        background-color: #f2f2f2;
+        font-size: 0.8rem;
+        padding-bottom: 70px;
+        /* pour compenser le footer */
+    }
+
+
+
+    .img-fluid {
+        width: 40%;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        /* passage à la ligne s'il y a pas assez de place sur une ligne */
+        justify-content: center;
+        /* pour centrer les boutons horizontalement */
+        justify-content: safe;
+        /* pour centrer les boutons horizontalement */
+        position: sticky;
+        top: 0;
+        background-color: #026f96;
+        color: #ffffff;
+        margin: 0px 0px;
+        /*pour avoir la barre collée au bord */
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        /*largeur de la barre  */
+        /*
+        border-top: 5px solid #000000;
+        border-bottom: 5px solid #000000;
+        /*pour avoir des barres autour de la barre de navigation */
+
+    }
+
+    nav .Nom,
+    nav .onglets {
+        gap: 10px;
+        /* espace entre chaque noms de lien */
+    }
+
+    .petite {
+        width: 100%;
+        max-width: 90px;
+    }
+
+
+
+    .moyenne {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .intermediaire {
+        width: 100%;
+        max-width: 300px;
+    }
+
+
+
+    .colonnes {
+
+        padding: 0 15px;
+        display: flex;
+        /* parce que c'est un site pour flex (non) */
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    body .caseintro,
+    .casecontact {
+        /* text-align: center;*/
+        font-size: 0.9rem;
+        border: 10px solid #026f96;
+        max-width: 1000px;
+        /* largeur du bloc */
+        margin: 5px auto 5px auto;
+        /* en haut/ à droite / en bas / à gauche */
+        padding: 10px 10px 10px 10px;
+    }
+
+    .caseintro h1,
+    .caseintro h2 {
+        font-size: 0.9rem;
+    }
+
+    body .page {
+        margin: 0px 0px 0px 0px;
+        /* en haut| à droite | en bas | à gauche */
+        padding: 10px 20px 10px 20px;
+        background-color: #f2f2f2;
+
+
+    }
+}
